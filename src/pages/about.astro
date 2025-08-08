@@ -1,0 +1,44 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+---
+
+<Layout metadata={{ title: 'About - John Graham' }}>
+  <Hero
+    title="About Me"
+    subtitle="Full-stack developer passionate about building efficient, scalable software with modern technologies."
+  />
+
+  <Features
+    title="Skills & Experience"
+    items={[
+      { title: 'Frontend Development', description: 'TypeScript, React, Astro, modern web technologies' },
+      { title: 'Backend Development', description: 'Go, Rust, Node.js, API design and microservices' },
+      { title: 'AI Integration', description: 'Leveraging AI tools and APIs in development workflows' },
+      { title: 'Full-Stack Projects', description: 'End-to-end application development and deployment' },
+    ]}
+  />
+
+  <!-- Add your personal story here -->
+  <section class="px-4 py-16 mx-auto max-w-6xl">
+    <div class="prose prose-lg mx-auto">
+      <p>
+        I'm a full-stack developer with a passion for creating efficient, maintainable software 
+        using modern technologies. My journey into programming began with curiosity about how 
+        things work under the hood, and has evolved into expertise across multiple languages 
+        and platforms.
+      </p>
+      <p>
+        Currently, I focus on TypeScript for frontend and backend development, Go for 
+        high-performance services, and Rust for systems programming. I'm particularly 
+        interested in leveraging AI tools to enhance development workflows and build 
+        better software faster.
+      </p>
+      <p>
+        When I'm not coding, you'll find me exploring new technologies, contributing to 
+        open source projects, or writing about my experiences in software development.
+      </p>
+    </div>
+  </section>
+</Layout>

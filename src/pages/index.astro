@@ -1,0 +1,38 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('post')).slice(0, 4);
+---
+
+<Layout metadata={{ title: 'John Graham - Full Stack Developer' }}>
+  <!-- Hero Section -->
+  <Hero
+    title="John Graham"
+    subtitle="Full-stack developer specializing in TypeScript, Go, and Rust. Embracing AI to build better software."
+    actions={[
+      { text: 'View Projects', href: '/projects' },
+      { text: 'Read Blog', href: '/blog' },
+    ]}
+  />
+
+  <!-- Tech Stack -->
+  <Features
+    title="Tech Stack"
+    items={[
+      { title: 'TypeScript', description: 'Frontend and backend development' },
+      { title: 'Go', description: 'High-performance backend services' },
+      { title: 'Rust', description: 'Systems programming and performance' },
+      { title: 'AI/ML', description: 'Leveraging AI in development workflows' },
+    ]}
+  />
+
+  <!-- Latest Blog Posts -->
+  <BlogLatestPosts
+    title="Latest Posts"
+    posts={posts}
+  />
+</Layout>

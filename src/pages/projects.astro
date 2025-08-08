@@ -1,0 +1,65 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+const projects = [
+  {
+    title: "AI Author",
+    description: "Interactive story generator with AI",
+    url: "https://ai-author.onrender.com",
+    technologies: ["React", "Node.js", "OpenAI"],
+    image: "~/assets/images/ai-author.jpg"
+  },
+  {
+    title: "CAC Inventory",
+    description: "Inventory management system for community centers",
+    url: "https://cac-inventory.onrender.com",
+    technologies: ["React", "Express", "MongoDB"],
+    image: "~/assets/images/cac-inventory.jpg"
+  },
+  {
+    title: "Merch Store",
+    description: "Internal merchandise store for an organization",
+    url: "https://internal-merch.onrender.com",
+    technologies: ["React", "Node.js", "Stripe"],
+    image: "~/assets/images/merch-store.jpg"
+  },
+  {
+    title: "Job App Tracker",
+    description: "Application tracking system for job seekers",
+    url: "https://job-app-tracker.onrender.com",
+    technologies: ["TypeScript", "React", "Firebase"],
+    image: "~/assets/images/job-tracker.jpg"
+  }
+];
+---
+
+<Layout metadata={{ title: 'Projects - John Graham' }}>
+  <Hero
+    title="Projects"
+    subtitle="A collection of applications and tools I've built using various technologies."
+  />
+
+  <section class="px-4 py-16 mx-auto max-w-6xl">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => (
+        <div class="bg-white dark:bg-slate-900 rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">{project.title}</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              {project.technologies.map((tech) => (
+                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-sm">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <a href={project.url} class="text-blue-600 hover:text-blue-800 font-medium">
+              View Project →
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>
