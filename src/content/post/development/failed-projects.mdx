@@ -1,0 +1,149 @@
+---
+publishDate: 2025-04-20T14:00:00Z
+title: "Failed Projects: Learning from Gacha Roller, D&D Generator, and AI-Author"
+excerpt: "Three projects that didn't work out and the valuable lessons they taught about APIs, complexity, and solving problems that don't exist."
+image: ~/assets/images/blog-placeholder.jpg
+category: Development
+tags:
+  - development
+  - failure
+  - learning
+  - projects
+metadata:
+  canonical: https://crohnos.github.io/development/failed-projects
+author: "John Graham"
+---
+
+## The Graveyard of Good Intentions
+
+Every developer has them - projects that started with enthusiasm and ended in abandonment. Mine include a Gacha Roller, a D&D Generator, and an AI-Author tool. Each failed for different reasons, but all taught valuable lessons about development, complexity, and the importance of solving real problems.
+
+Let's autopsy these failures.
+
+## Gacha Roller: When APIs Disappoint and Motivation Dies
+
+The idea was simple: create a gacha game character roller with AI-generated artwork. Players could roll for characters and get unique, AI-created art for each one. What could go wrong?
+
+Everything, as it turned out.
+
+**The Technical Reality Check**
+
+The Hugging Face image generation API was, to put it kindly, mediocre. The generated images looked like someone had described anime characters to an alien who'd never seen humans. Characters had too many fingers, faces that melted into backgrounds, and art styles that varied wildly between "MS Paint" and "fever dream."
+
+This led me down a rabbit hole of trying to interact directly with Stable Diffusion models. Turns out, working with raw diffusion models is profoundly difficult. You need to understand:
+- Model architectures and checkpoints
+- Prompt engineering specific to visual generation
+- Sampling methods and schedulers
+- VRAM management and optimization
+- Post-processing pipelines
+
+Maybe I just needed better methods or more practice, but the learning curve was vertical and the payoff unclear.
+
+**The Motivation Killer**
+
+Here's the real failure: I hate gacha games. 
+
+I was building something I fundamentally disliked, solving a problem I didn't care about, for users I didn't understand. When the technical challenges mounted, I had no intrinsic motivation to push through. Why was I building a gacha game when I'd spent years escaping their predatory mechanics?
+
+**Lesson Learned**: Don't build what you wouldn't use. Technical challenges are surmountable when you care about the outcome. When you don't, every bug becomes a reason to quit.
+
+## D&D Generator: Death by Overcomplexity
+
+Fresh off learning about LLMs, I decided to build the ultimate D&D campaign generator. Characters, plots, dungeons, NPCs - all procedurally generated with AI. And because I wanted to learn Rust, why not build it in a language I'd never used?
+
+This was hubris.
+
+**The Rust Learning Wall**
+
+Starting with Rust when you need to build something complex is like learning to swim by jumping into rapids. The borrow checker became my nemesis. What would be simple in Python became a war with the compiler:
+- Lifetime annotations everywhere
+- Fighting with ownership for basic data structures
+- Async runtime complexity
+- Error handling that required a PhD to understand
+
+What should have been a simple API wrapper turned into a complex beast of trait implementations and generic bounds.
+
+**The Prompt Chaining Nightmare**
+
+The core functionality required chaining multiple LLM calls:
+1. Generate a character concept
+2. Expand into full stats
+3. Create a backstory
+4. Generate plot hooks
+5. Build related NPCs
+6. Design appropriate encounters
+
+Each step depended on JSON from the previous step. The prompt chains became fragile pipelines where one malformed response would cascade into total failure. Error handling became recursive. Token costs exploded. 
+
+Worse, the user experience was terrible. Users would click "Generate Campaign" and then wait... and wait... and wait... as the system churned through prompt after prompt. By the time results appeared, users had lost interest or assumed it was broken.
+
+**Lesson Learned**: Start with the simplest possible implementation. Learn new languages on toy projects, not production ones. And always consider the user experience of AI latency - nobody wants to wait 45 seconds for generated content.
+
+## AI-Author: Solving a Problem That Doesn't Exist
+
+This was my most embarrassing failure because it was the most avoidable. AI-Author was going to be a specialized tool for writing long-form content with AI assistance. It would manage context, maintain consistency, handle character sheets, track plot points...
+
+Then Claude and GPT got 100k+ token context windows.
+
+**The Redundancy Revelation**
+
+Everything AI-Author was supposed to do, regular LLM interfaces now do better:
+- Long context windows eliminated the need for context management
+- Improved models maintained consistency without special handling
+- You could literally paste an entire novel draft and get coherent feedback
+- Character sheets? Just include them in the prompt
+
+I was building infrastructure for problems that had already been solved. It's like building a custom database when PostgreSQL exists.
+
+**The Moving Target Problem**
+
+AI capabilities are improving so fast that building tools around their limitations is foolish. By the time you've solved yesterday's problem, today's model has made your solution obsolete. I spent months building workarounds for context limitations that disappeared overnight with a model update.
+
+**Lesson Learned**: Don't build infrastructure for rapidly evolving technology. Today's limitations are tomorrow's old news. Focus on problems that won't be solved by the next model update.
+
+## The Meta-Lessons of Failure
+
+Looking across all three failures, patterns emerge:
+
+**1. Passion Matters More Than Tech**
+The Gacha Roller had interesting technical challenges, but I didn't care about gacha games. Without passion for the problem, technical hurdles become walls instead of puzzles.
+
+**2. Complexity Compounds**
+The D&D Generator failed because I added complexity everywhere - new language, complex architecture, chained dependencies. Each added complexity multiplied the others until the project collapsed under its own weight.
+
+**3. Timing Is Everything**
+AI-Author was the right idea at the wrong time. Six months earlier, it would have been useful. Six months later, it was obsolete. In fast-moving fields, timing matters more than execution.
+
+**4. Users Don't Care About Your Tech Stack**
+Nobody cares that your D&D generator uses Rust. They care that it takes forever to generate results. Technical elegance means nothing if the user experience sucks.
+
+## The Value of Failure
+
+These projects "failed" but taught me:
+- How image generation actually works (and doesn't)
+- Rust ownership concepts (the hard way)
+- LLM prompt chaining patterns and pitfalls
+- The importance of tracking AI capability improvements
+- When to build vs. when to wait
+
+More importantly, they taught me to:
+- Build what I'd actually use
+- Start simple, always
+- Consider user experience before technical elegance
+- Recognize when technology is moving too fast to build around
+
+## Moving Forward
+
+I don't regret these failures. Each one made me a better developer and decision-maker. The Gacha Roller taught me to align projects with values. The D&D Generator taught me to manage complexity. AI-Author taught me to recognize obsolescence before it happens.
+
+The graveyard of failed projects isn't a monument to wasted time - it's a learning laboratory where each failure teaches lessons success never could.
+
+## The Permission to Fail
+
+If you're reading this with your own failed projects in mind, know this: failure is data collection. Every abandoned project teaches you what doesn't work, what you don't enjoy, or what the world doesn't need. That's valuable information.
+
+The only real failure is not learning from failure. Or worse, being too afraid to start projects that might fail.
+
+So build things. Break things. Abandon things. Learn from things. The projects that fail teach you how to build the ones that won't.
+
+And sometimes, knowing when to quit is the most valuable skill of all.

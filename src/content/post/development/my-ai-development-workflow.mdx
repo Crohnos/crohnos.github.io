@@ -1,0 +1,182 @@
+---
+publishDate: 2025-04-07T10:00:00Z
+title: "My AI Development Workflow: From ChatGPT to Claude Code"
+excerpt: "The evolution of AI coding assistants and how Claude Code became my primary development tool - capable of writing thousands of lines without error."
+image: ~/assets/images/blog-placeholder.jpg
+category: Development
+tags:
+  - AI
+  - development
+  - productivity
+  - tools
+metadata:
+  canonical: https://crohnos.github.io/development/my-ai-development-workflow
+author: "John Graham"
+---
+
+## The Early Days of Disappointment
+
+Like everyone else, I jumped on ChatGPT when it first launched. The hype was real, but the coding ability? Not so much. It would confidently generate code that looked plausible but was riddled with syntax errors, logical flaws, and deprecated methods. It was like having a junior developer who had skimmed Stack Overflow but never actually run their code.
+
+Then came Claude. Better reasoning, better explanations, but still lackluster for actual development work. It could explain concepts beautifully but stumbled when generating anything beyond toy examples. I was starting to think AI coding assistants were more hype than help.
+
+## The Breakthrough: Learning to Speak AI
+
+Everything changed when I discovered Anthropic's prompt engineering techniques. This wasn't about magic words or "jailbreaking" - it was about understanding how to communicate with AI effectively.
+
+**XML Tags Changed Everything**
+
+Instead of dumping requirements in a paragraph, I learned to structure prompts:
+
+```xml
+<task>
+Create a REST API endpoint for user authentication
+</task>
+
+<requirements>
+- JWT token generation
+- Password hashing with bcrypt
+- Rate limiting
+- Input validation
+</requirements>
+
+<context>
+Using Express.js and PostgreSQL
+</context>
+```
+
+Suddenly, the AI understood exactly what I wanted. The ambiguity disappeared. The output quality skyrocketed.
+
+**Granting Roles**
+
+"You are a senior TypeScript developer with expertise in React and Node.js" sounds silly, but it works. Giving Claude a specific role and expertise area dramatically improved the relevance and quality of its responses. It stopped giving generic advice and started giving expert guidance.
+
+## The Current State: A Multi-Tool Approach
+
+Today, my AI workflow is sophisticated and task-specific:
+
+**Thinking and Planning: Gemini, Grok, or Claude**
+
+When I need to architect a system, think through a complex problem, or plan a project, I use whichever AI feels right for the task. Each has its strengths:
+- Gemini excels at comprehensive research and analysis
+- Grok is great for cutting through BS and getting straight answers
+- Claude shines at nuanced reasoning and considering edge cases
+
+These conversations are about strategy, not implementation. "How should I structure this microservices architecture?" not "Write me a Dockerfile."
+
+**Execution: Claude Code**
+
+For actual coding and writing, Claude Code is in a league of its own. This isn't just another AI assistant - it's a paradigm shift in how development works.
+
+## Claude Code: The Game Changer
+
+Claude Code isn't just better at coding - it's fundamentally different. It can successfully write thousands of lines of code without error when directed correctly. Not "mostly correct" code that needs debugging. Actually working, production-ready code.
+
+**Why It's Different**
+
+1. **Context Awareness**: It understands entire codebases, not just snippets
+2. **Tool Calling**: It can actually run code, check outputs, and iterate
+3. **File System Manipulation**: It reads, writes, and modifies files directly
+4. **Error Recovery**: When something breaks, it fixes it autonomously
+
+**The Workflow Revolution**
+
+I find myself preferring to ask Claude to create bash scripts and run them rather than typing commands myself. Why? Because it's faster, more accurate, and self-documenting. 
+
+"Create a script to find all TypeScript files that import React but don't use it" becomes a working script in seconds. Running it, analyzing results, and making changes happens in one conversational flow.
+
+## Real-World Examples
+
+**Example 1: Full Stack Feature**
+"Add a comment system to this blog with nested replies, upvoting, and real-time updates."
+
+Claude Code:
+- Analyzed the existing codebase structure
+- Created the database schema
+- Built the API endpoints
+- Implemented the frontend components
+- Added WebSocket support for real-time updates
+- Wrote tests
+- Updated documentation
+
+Total time: 15 minutes. Lines of code: ~2000. Bugs requiring manual intervention: Zero.
+
+**Example 2: Refactoring Legacy Code**
+"Refactor this 5000-line JavaScript file to TypeScript with proper typing."
+
+Claude Code:
+- Read the entire file
+- Inferred types from usage patterns
+- Created interface definitions
+- Converted the code incrementally
+- Fixed type errors
+- Maintained backward compatibility
+
+What would have taken days took hours.
+
+## The Prompt Engineering Secret Sauce
+
+Here's what I've learned about getting Claude Code to write error-free code:
+
+**Be Specific About Context**
+- Specify language versions
+- List available libraries
+- Describe the existing architecture
+- Mention coding standards
+
+**Structure Complex Tasks**
+Break down large requests into clear phases:
+1. Understand the current state
+2. Plan the implementation
+3. Execute incrementally
+4. Verify each step
+
+**Use Claude's Strengths**
+- Let it read files rather than pasting code
+- Have it run tests rather than assuming correctness
+- Ask it to check its own work
+
+## The Filesystem Revolution
+
+The most underappreciated feature of Claude Code is filesystem manipulation. I regularly ask it to:
+- Reorganize project structures
+- Batch rename files following conventions
+- Search and replace across codebases
+- Generate boilerplate for new features
+- Clean up unused dependencies
+
+It's like having a senior developer who never gets tired of tedious tasks.
+
+## What This Means for Development
+
+We're not replacing developers - we're amplifying them. With Claude Code, I can:
+- Focus on architecture while it handles implementation
+- Experiment with approaches without time investment
+- Maintain multiple projects without context switching
+- Write better code by having it reviewed in real-time
+
+The bottleneck has shifted from typing speed to thinking speed. The question isn't "how do I implement this?" but "what should I build?"
+
+## Tips for Developers Starting with AI
+
+1. **Start with small, well-defined tasks** - Don't try to build entire applications immediately
+2. **Learn prompt engineering** - Structure and clarity matter more than you think
+3. **Use the right tool for the task** - Planning vs. execution require different approaches
+4. **Trust but verify** - AI is powerful but not infallible
+5. **Iterate rapidly** - The cost of trying approaches is near zero
+
+## The Future Is Already Here
+
+When I tell other developers that Claude Code wrote thousands of lines of production code without errors, they don't believe me. When I show them, they think it's a trick. When they try it themselves with proper prompting, they become converts.
+
+This isn't about AI replacing programmers. It's about programmers who use AI replacing programmers who don't. The productivity gap is too large to ignore.
+
+## Looking Forward
+
+We're in the early days of AI-assisted development. Claude Code is already revolutionary, but it's just the beginning. As these tools improve, the nature of programming will fundamentally change.
+
+The future developer won't be someone who memorizes syntax and API calls. They'll be someone who can think clearly, communicate precisely, and orchestrate AI tools to bring ideas to life at unprecedented speed.
+
+That future isn't coming. It's here. And it's writing this blog post.
+
+Well, sort of.

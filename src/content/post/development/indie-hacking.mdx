@@ -1,0 +1,249 @@
+---
+publishDate: 2025-07-28T10:00:00Z
+title: "Indie Hacking the Pieter Levels Way: Ship Fast, Learn Faster"
+excerpt: "No frameworks, no venture capital, no excuses. How to build profitable businesses with PHP, SQLite, and radical simplicity."
+image: ~/assets/images/blog-placeholder.jpg
+category: Development
+tags:
+  - indie hacking
+  - entrepreneurship
+  - development
+  - business
+metadata:
+  canonical: https://crohnos.github.io/development/indie-hacking
+author: "John Graham"
+---
+
+## The Anti-Framework Framework
+
+Pieter Levels built multiple million-dollar businesses using PHP, jQuery, and SQLite. While everyone else debates microservices and Kubernetes, he's shipping products that make money. His approach is so unconventional it seems wrong - until you see the results.
+
+No React. No TypeScript. No AWS. Just PHP files, a SQLite database, and a single VPS. This isn't technical debt - it's technical freedom.
+
+## The Levels Stack: Embarrassingly Simple
+
+Here's what Pieter actually uses:
+
+**Backend**: Plain PHP. Not Laravel. Not Symfony. Just `.php` files handling requests. One file per endpoint. No abstractions.
+
+**Database**: SQLite. One file. No PostgreSQL, no MongoDB, no Redis. Just a single file you can copy, backup, and understand.
+
+**Frontend**: jQuery and vanilla JavaScript. No build process. No webpack. No npm. Just files that browsers understand.
+
+**Hosting**: A single DigitalOcean VPS. No Kubernetes. No microservices. No auto-scaling. One server until it breaks.
+
+**Deployment**: `rsync` or `git pull`. No CI/CD. No Docker. Push code, refresh browser, see changes.
+
+This stack is "wrong" by every modern standard. It also powers businesses making millions.
+
+## The 12-Hour MVP Method
+
+Pieter's validation framework is brutally simple:
+
+### Step 1: Find a Problem (1 hour)
+- Check Twitter/Reddit complaints
+- Look at your own frustrations
+- Ask "what are people already paying for?"
+- Pick something you can build TODAY
+
+Don't overthink. Don't research markets. Don't create surveys. Find someone complaining and build the solution.
+
+### Step 2: Create a Landing Page (2 hours)
+- Buy a domain (use Namecheap, immediate activation)
+- Set up basic HTML/CSS (copy from previous projects)
+- Write clear value proposition
+- Add email capture or payment button
+- Ship to production immediately
+
+No design process. No A/B testing. No perfection. Just a page that explains what you're building.
+
+### Step 3: Build the Core Feature (6 hours)
+- One feature only
+- Hardcode everything
+- No user accounts initially
+- No admin panels
+- Just the thing that solves the problem
+
+RemoteOK started as a Google Sheet. Nomad List was static HTML. The first version is always embarrassing.
+
+### Step 4: Add Payment (2 hours)
+- Stripe Checkout (not Stripe Elements, too complex)
+- Single payment link
+- No subscription management initially
+- No refund system (handle manually)
+- Price high ($30+ minimum)
+
+Start charging immediately. Free users aren't validation. Payment is validation.
+
+### Step 5: Launch Everywhere (1 hour)
+- Tweet with #buildinpublic
+- Post on Hacker News (Show HN)
+- Submit to Product Hunt
+- Share in relevant subreddits
+- Message specific people who'd benefit
+
+Don't wait for the perfect launch. Launch ugly, launch broken, but launch.
+
+## The Validation Metrics
+
+Pieter's validation is binary:
+
+**Success**: 3 paying customers in 48 hours
+**Failure**: Less than 3 paying customers
+
+That's it. No complex metrics. No engagement rates. No retention curves. Just: will people pay?
+
+If yes, continue. If no, abandon or pivot immediately.
+
+## The Growth Hacks That Actually Work
+
+**SEO Through Radical Transparency**
+- Blog about revenue (people love numbers)
+- Share everything (code, metrics, failures)
+- Build in public (constant free marketing)
+- Create controversy (strong opinions get shared)
+
+**Programmatic SEO**
+- Generate thousands of pages from data
+- City pages, comparison pages, list pages
+- Let Google index everything
+- Quantity over quality initially
+
+**Social Proof Automation**
+- Show recent signups in real-time
+- Display revenue counters
+- Tweet milestones automatically
+- Make success visible
+
+## The Psychological Framework
+
+**Ship Before You're Ready**
+Perfection is procrastination. Every day not shipped is a day not learning. Your first version will be wrong anyway.
+
+**Charge More Than You Think**
+Developers undercharge. If you think $10, charge $30. If you think $30, charge $100. High prices attract serious customers.
+
+**Ignore Best Practices**
+Best practices are for big companies. You're not a big company. Do what works, not what's "right."
+
+**Build What You'd Use**
+If you wouldn't pay for it, nobody else will. Scratch your own itch first.
+
+## The Actual Process: Step by Step
+
+### Day 1: Idea to Payment
+**Morning**: Find problem on Twitter/Reddit
+**Afternoon**: Build landing page with payment button
+**Evening**: Post everywhere, gauge interest
+
+### Week 1: MVP to Revenue
+**Days 2-3**: Build core feature (one thing only)
+**Days 4-5**: Add basic user system if needed
+**Days 6-7**: Launch on Product Hunt, iterate based on feedback
+
+### Month 1: Revenue to Growth
+**Week 2**: Add second feature based on user requests
+**Week 3**: Implement basic automation
+**Week 4**: Focus on SEO and content
+
+### Month 2-3: Growth to Profit
+- Automate everything possible
+- Raise prices for new customers
+- Add annual plans
+- Stop adding features, start optimizing
+
+## The Tools You Actually Need
+
+**Development**:
+- VS Code (or any text editor)
+- MAMP/XAMPP for local PHP
+- Git for version control
+- That's it
+
+**Business**:
+- Stripe for payments
+- Mailgun for emails
+- Plausible for analytics
+- Twitter for marketing
+
+**Nothing Else**. No Notion. No Slack. No project management. No team. Just you and code.
+
+## The Anti-Patterns to Avoid
+
+**Don't**:
+- Raise money (it complicates everything)
+- Hire employees (they slow you down)
+- Use complex frameworks (they add overhead)
+- Build features users don't pay for
+- Optimize before $10k/month revenue
+
+**Do**:
+- Ship daily
+- Charge immediately
+- Stay solo as long as possible
+- Use boring technology
+- Focus on revenue, not users
+
+## Real Examples from Levels
+
+**Nomad List**: Started as a Google Sheet, now makes $30k+/month. Still runs on PHP and SQLite.
+
+**RemoteOK**: Job board built in a weekend, makes $50k+/month. No fancy matching algorithm, just a list.
+
+**PhotoAI**: AI photo generator, $80k+/month. One PHP file handling Replicate API calls.
+
+**Interior AI**: Room designer, $60k+/month. Same stack, different API.
+
+Pattern: Simple idea + immediate execution + high price = profitable business.
+
+## The Mindset Shift
+
+Traditional thinking says you need:
+- Perfect code architecture
+- Scalable infrastructure
+- Team of experts
+- Venture capital
+- Years of development
+
+Levels proves you need:
+- A problem people pay to solve
+- 12 hours to build something
+- Courage to charge money
+- Persistence to iterate
+- Nothing else
+
+## The 90-Day Challenge
+
+Here's the Levels challenge:
+
+**Month 1**: Launch 3 products. Each gets 12 hours max. Charge for all of them.
+
+**Month 2**: Focus on the one with most revenue. Double the price. Add one feature.
+
+**Month 3**: Automate everything. Spend time on marketing, not coding.
+
+By day 90, you either have a business or you've learned why not. Both outcomes are valuable.
+
+## The Uncomfortable Truth
+
+Most developers won't do this. They'll say:
+- "SQLite doesn't scale"
+- "PHP is outdated"
+- "This code is unmaintainable"
+- "You need proper architecture"
+
+While they're debating, indie hackers are shipping. While they're architecting, indie hackers are earning. While they're raising funds, indie hackers are raising prices.
+
+## Start Today, Not Tomorrow
+
+The best time to start was yesterday. The second best time is now. Not after you learn React. Not after you read another book. Not after the perfect idea strikes.
+
+Now.
+
+Open a text editor. Create `index.php`. Add a Stripe button. Solve someone's problem. Charge money.
+
+Everything else is procrastination disguised as preparation.
+
+The indie hacker way isn't pretty. It isn't perfect. It isn't even good code. But it works, it ships, and it makes money.
+
+And that's all that matters.
